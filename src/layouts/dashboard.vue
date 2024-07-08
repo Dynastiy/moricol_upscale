@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-drawer :menu="menu" />
+    <app-drawer :menu="menu" class="md:block lg:block hidden"/>
     <app-header :menu="menu" class="" />
     <div id="main" class="lg:ml-[280px] md:ml-[280px]">
       <div class="px-6 py-6 bg-neutral-200 min-h-screen">
@@ -23,11 +23,32 @@ export default {
   components: { AppDrawer, AppHeader },
   data() {
     return {
-      // menu
+      menu: []
     }
   },
   mounted() {
     console.log(this.$router.getRoutes().filter(item=> item.meta.adminUserType == this.adminType))
+  },
+
+  methods: {
+    getMenu(){
+      this.menu = this.$router.getRoutes().filter(item=> item.meta.adminUserType == this.adminType)
+    }
+  },
+
+  created(){
+    this.getMenu()
+  },
+
+  watch: {
+    adminType: {
+      handler(val) {
+        if(val) {
+          this.getMenu()
+        }
+      },
+      immediate: true
+    }
   },
 
   computed: {
@@ -35,9 +56,9 @@ export default {
     //   console.log(this.$router);
     //   return true
     // }
-    menu(){
-      return this.$router.getRoutes().filter(item=> item.meta.adminUserType == this.adminType)
-    },
+    // menuItems(){
+    //   return this.$router.getRoutes().filter(item=> item.meta.adminUserType == this.adminType)
+    // },
     adminType(){
       return localStorage.getItem('adminType')
     }
