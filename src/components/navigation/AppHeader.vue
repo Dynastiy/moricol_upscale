@@ -8,7 +8,7 @@
       >
         <div class="lg:w-[280px] md:w-280px w-auto h-[70px] flex justify-center">
           <img
-            src="@/assets/BrandImg/logo.png"
+            src="@/assets/brandImg/logo.png"
             class="lg:w-36 md:w-36 w-auto"
             alt="croxxtalent logo"
             @click="goToLink"
