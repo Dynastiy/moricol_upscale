@@ -4,7 +4,7 @@
       <span
         v-for="menu in modules"
         :key="menu"
-        class="bg-primary-100 capitalize p-4 rounded-lg text-center hover:bg-primary-400 hover:text-white hover:border-b  hover:border-b-4 hover:border-b-primary-600"
+        class="bg-primary-100 capitalize p-4 rounded-lg text-center hover:bg-primary-400 hover:text-white hover:border-b hover:border-b-4 hover:border-b-primary-600"
         role="button"
         @click="selectRole(menu)"
       >
@@ -25,7 +25,7 @@ export default {
 
   methods: {
     selectRole(e) {
-      localStorage.setItem('adminType', e)
+      this.$store.commit('setAdminType', e)
       this.$router.push(`/${e}/index`)
     }
   },

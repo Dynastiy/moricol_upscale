@@ -32,9 +32,9 @@
                     </span>
                     <div class="flex flex-col gap-2 mt-3">
                       <span
-                        :role="item === selectedModule ? '' : 'button'"
+                        :role="item === adminType ? '' : 'button'"
                         class="capitalize"
-                        @click="item !== selectedModule ? selectRole(item) : ''"
+                        @click="item !== adminType ? selectRole(item) : ''"
                         v-for="item in [
                           'training',
                           'recruitment',
@@ -45,7 +45,7 @@
                           'massage'
                         ]"
                         :key="item"
-                        :class="{'text-primary-500': item === selectedModule}"
+                        :class="{'text-primary-500': item === adminType}"
                         >{{ item }}</span
                       >
                     </div>
@@ -126,7 +126,6 @@ export default {
       this.route.layout === 'Auth' ? this.$router.push('/') : this.$router.push('/dashboard')
     },
     selectRole(e) {
-      this.selectedModule = e
       // localStorage.setItem('adminType', e)
       this.$store.commit('setAdminType', e)
       // console.log('admin type:', e );
@@ -140,6 +139,10 @@ export default {
     },
     route() {
       return this.$route.meta
+    },
+    adminType() {
+      let res = this.$store.getters['getAdminType']
+      return res
     }
   }
 }
