@@ -69,8 +69,7 @@ export default {
   methods: {
     onSubmit(values) {
         console.log(values);
-        this.$router.push(`/${values.password}/index`)
-        localStorage.setItem('adminType', values.password)
+        this.$router.push(`/dashboard`)
     }
   }
 }

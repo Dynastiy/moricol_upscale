@@ -22,18 +22,19 @@
             routeName.split('-').join(' ')
           }}</span>
           <div class="flex gap-3 items-center justify-end">
-            <div>
+            <div class="flex items-center">
               <el-dropdown trigger="click" placement="bottom-end">
-                <span class="el-dropdown-link text-white"> Select Admin </span>
+                <span class="el-dropdown-link text-white mb-0"> Select Module </span>
                 <template #dropdown>
                   <div class="p-4 w-[250px]">
                     <span class="flex justify-between items-center">
-                      <h4 class="font-semibold text-[14px]">Admin Roles</h4>
+                      <h4 class="font-semibold text-[14px]">All Modules</h4>
                     </span>
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 mt-3">
                       <span
-                        role="button"
-                        @click="selectRole(item)"
+                        :role="item === selectedModule ? '' : 'button'"
+                        class="capitalize"
+                        @click="item !== selectedModule ? selectRole(item) : ''"
                         v-for="item in [
                           'training',
                           'recruitment',
@@ -44,6 +45,7 @@
                           'massage'
                         ]"
                         :key="item"
+                        :class="{'text-primary-500': item === selectedModule}"
                         >{{ item }}</span
                       >
                     </div>
@@ -62,7 +64,7 @@
       </div>
     </div>
 
-    <Sidebar v-model:visible="drawer" position="right" style="width: 80%">
+    <Sidebar v-model:visible="drawer" position="right" style="width: 80%" v-if="menu.length > 0">
       <template #container="{ closeCallback }">
         <div class="h-screen bg-primary-500 pb-28 flex flex-col z-20">
           <div class="pr-4">
@@ -88,7 +90,7 @@
             </div>
 
             <div class="flex gap-2 px-4 items-center text-white text-[13px]" role="button">
-              <i-icon icon="fe:logout" class="menu-item-icon text-[20px]" />
+              <icon icon="fe:logout" class="menu-item-icon text-[20px]" />
               <span class="flex flex-column capitalize">
                 <span> Logout </span>
               </span>
@@ -114,7 +116,8 @@ export default {
 
   data() {
     return {
-      drawer: false
+      drawer: false,
+      selectedModule: ''
     }
   },
 
@@ -123,7 +126,11 @@ export default {
       this.route.layout === 'Auth' ? this.$router.push('/') : this.$router.push('/dashboard')
     },
     selectRole(e) {
-      localStorage.setItem('adminType', e)
+      this.selectedModule = e
+      // localStorage.setItem('adminType', e)
+      this.$store.commit('setAdminType', e)
+      // console.log('admin type:', e );
+      // console.log('admin tyoe from local Storage', localStorage.getItem('adminType'))
       this.$router.push(`/${e}/index`)
     }
   },
