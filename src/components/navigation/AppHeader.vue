@@ -24,7 +24,7 @@
           <div class="flex gap-3 items-center justify-end">
             <div class="flex items-center">
               <el-dropdown trigger="click" placement="bottom-end">
-                <span class="el-dropdown-link text-white mb-0"> Select Module </span>
+                <span class="el-dropdown-link text-white mb-0"> Select Services </span>
                 <template #dropdown>
                   <div class="p-4 w-[250px]">
                     <span class="flex justify-between items-center">
