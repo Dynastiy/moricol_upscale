@@ -1,0 +1,74 @@
+[
+    {
+        "name": "John Doe",
+        "services": ["Swedish Massage", "Deep Tissue Massage"],
+        "location": "Lagos",
+        "feePerHour": 5000,
+        "status": "active",
+        "username": "john_doe",
+        "profilePicture": "https://example.com/profiles/john_doe.jpg"
+    },
+    {
+        "name": "Jane Smith",
+        "services": ["Thai Massage", "Hot Stone Massage"],
+        "location": "Abuja",
+        "feePerHour": 6500,
+        "status": "inactive",
+        "username": "jane_smith",
+        "profilePicture": "https://example.com/profiles/jane_smith.jpg"
+    },
+    {
+        "name": "Alice Johnson",
+        "services": ["Aromatherapy Massage", "Reflexology"],
+        "location": "Ibadan",
+        "feePerHour": 4500,
+        "status": "active",
+        "username": "alice_johnson",
+        "profilePicture": "https://example.com/profiles/alice_johnson.jpg"
+    },
+    {
+        "name": "Bob Brown",
+        "services": ["Sports Massage", "Shiatsu"],
+        "location": "Port Harcourt",
+        "feePerHour": 5500,
+        "status": "inactive",
+        "username": "bob_brown",
+        "profilePicture": "https://example.com/profiles/bob_brown.jpg"
+    },
+    {
+        "name": "Charlie Davis",
+        "services": ["Swedish Massage", "Prenatal Massage"],
+        "location": "Kano",
+        "feePerHour": 5000,
+        "status": "active",
+        "username": "charlie_davis",
+        "profilePicture": "https://example.com/profiles/charlie_davis.jpg"
+    },
+    {
+        "name": "Diana Evans",
+        "services": ["Hot Stone Massage", "Deep Tissue Massage"],
+        "location": "Benin City",
+        "feePerHour": 6000,
+        "status": "active",
+        "username": "diana_evans",
+        "profilePicture": "https://example.com/profiles/diana_evans.jpg"
+    },
+    {
+        "name": "Ethan Foster",
+        "services": ["Thai Massage", "Sports Massage"],
+        "location": "Enugu",
+        "feePerHour": 5500,
+        "status": "inactive",
+        "username": "ethan_foster",
+        "profilePicture": "https://example.com/profiles/ethan_foster.jpg"
+    },
+    {
+        "name": "Fiona Green",
+        "services": ["Aromatherapy Massage", "Shiatsu"],
+        "location": "Jos",
+        "feePerHour": 4500,
+        "status": "active",
+        "username": "fiona_green",
+        "profilePicture": "https://example.com/profiles/fiona_green.jpg"
+    }
+]

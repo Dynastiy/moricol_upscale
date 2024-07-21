@@ -54,6 +54,9 @@ import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import Rating from 'primevue/rating';
 
+import vTable from '@/components/assets/table.vue';
+import mainTabHeader from '@/components/assets/mainTabHeader.vue';
+
 // Veuelidate Form 
 import { Form, Field, ErrorMessage } from 'vee-validate'
 
@@ -71,4 +74,6 @@ export default function registerComponents(app) {
     app.component('vForm', Form)
     app.component('Field', Field)
     app.component('ErrorMessage', ErrorMessage)
+    app.component('vTable', vTable)
+    app.component('mainTabHeader', mainTabHeader)
 }

@@ -14,10 +14,11 @@ import QrReader from 'vue3-qr-reader'
 import PrimeVue from 'primevue/config'
 import 'primevue/resources/themes/aura-light-green/theme.css'
 
-import { createHead } from '@vueuse/head';
-const head = createHead();
+import { createHead } from '@vueuse/head'
+const head = createHead()
 
-
+// Plugins
+import { currencyFormat, formatDate, getID } from '@/plugins/filters'
 
 export default function registerPlugins(app) {
   app.use(ElementPlus)
@@ -39,5 +40,9 @@ export default function registerPlugins(app) {
     appendToBody: true
   })
   app.use(QrReader)
-  app.use(head);
+  app.use(head)
+
+  app.config.globalProperties.$currencyFormat = currencyFormat
+  app.config.globalProperties.$formatDate = formatDate
+  app.config.globalProperties.$getID = getID
 }

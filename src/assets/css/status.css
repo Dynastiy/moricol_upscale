@@ -1,0 +1,11 @@
+.active, .completed {
+    color: var(--green-600);
+}
+
+.ongoing {
+    color: var(---primary-500);
+}
+
+.inactive {
+    color: var(--red-600);
+}

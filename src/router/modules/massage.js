@@ -1,10 +1,10 @@
-import Home from '@/modules/App/Massage/Index.vue'
+// import Home from '@/modules/App/Massage/Index.vue'
 
 const routes = [
   {
     path: '/massage/index',
     name: 'massage-home',
-    component: Home,
+    component: () => import('@/modules/App/Massage/Index.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
@@ -19,7 +19,7 @@ const routes = [
   {
     path: '/massage/massage-staff',
     name: 'massage-massage-staff',
-    component: Home,
+    component: () => import('@/modules/App/Massage/Staff.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
@@ -34,7 +34,7 @@ const routes = [
   {
     path: '/massage/staff-schedules',
     name: 'massage-staff-schedules',
-    component: Home,
+    component: () => import('@/modules/App/Massage/Schedules.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
@@ -49,7 +49,7 @@ const routes = [
   {
     path: '/massage/staff-transactions',
     name: 'massage-staff-transactions',
-    component: Home,
+    component: () => import('@/modules/App/Massage/StaffTransactions.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
@@ -64,7 +64,7 @@ const routes = [
   {
     path: '/massage/user-transactions',
     name: 'massage-user-transactions',
-    component: Home,
+    component: () => import('@/modules/App/Massage/UserTransactions.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
@@ -79,7 +79,7 @@ const routes = [
   {
     path: '/massage/massage-category',
     name: 'massage-massage-category',
-    component: Home,
+    component: () => import('@/modules/App/Massage/Category.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
