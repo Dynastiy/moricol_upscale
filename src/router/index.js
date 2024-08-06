@@ -24,8 +24,8 @@ const baseRoutes = [
     meta: {
       layout: 'home',
       requiresAuth: false,
-      pageTitle: 'Moricol - Home',
-      name: 'morical-home'
+      pageTitle: 'Home',
+      name: 'home'
     }
   },
 ]

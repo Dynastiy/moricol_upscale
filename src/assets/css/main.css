@@ -102,3 +102,9 @@ input[type='checkbox'] {
 input[type='radio'] {
   accent-color: var(---primary-700);
 }
+
+.p-icon {
+  color: var(---primary-500);
+  width: 13px;
+  height: 13px;
+}

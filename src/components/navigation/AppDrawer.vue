@@ -42,7 +42,9 @@ export default {
 
     toggleSubMenu(value){
       this.subMenu = this.subMenu === null ? value.parent : null
-    }
+    },
+
+    
   },
 }
 </script>

@@ -18,4 +18,9 @@ export function currencyFormat(value) {
     const ID = options.slice(0,6)
     return ID
   }
+
+  export function splitText(value) {
+    const options = value.split("_").join(' ')
+    return options
+  }
   

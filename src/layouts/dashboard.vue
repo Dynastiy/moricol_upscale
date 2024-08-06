@@ -3,10 +3,21 @@
     <app-drawer :menu="menu" class="md:block lg:block hidden" />
     <app-header :menu="menu" class="" />
     <div id="main" class="lg:ml-[280px] md:ml-[280px]">
-      <div class="px-6 py-6 bg-neutral-200 min-h-screen">
+      <div :class="['px-6 py-6 min-h-screen bg-white']">
         <!-- <div>
           {{ breadcrumb }}
         </div> -->
+        <div class="mb-6 text-sm" v-if="isSubPage">
+          <!-- <span role="button" @click="$router.back()" class="text-neutral-600 capitalize"
+            >{{ routeParent }}
+          </span>
+          <span>/</span>
+          <span class="capitalize">{{ routeSubName }}</span> -->
+          <span role="button" @click="$router.back()" class="flex gap-1 items-center">
+            <icon icon="la:long-arrow-alt-left" />
+            Back
+          </span>
+        </div>
         <div>
           <slot />
         </div>
@@ -60,6 +71,9 @@ export default {
     adminValue() {
       let res = this.$store.getters['getAdminType']
       return res
+    },
+    isSubPage() {
+      return this.$route.meta.isSubPage
     }
   }
 }

@@ -1,7 +1,14 @@
 <template>
   <div>
     <!-- Staff -->
-    <vTable :items="massageStaff" :columns="columns" title="Massage Staff" count="36" inputPlaceholder="Search Employee by name, Department, ID or any related keywords" />
+    <vTable
+      :items="massageStaff"
+      :columns="columns"
+      title="Massage Staff"
+      count="36"
+      inputPlaceholder="Search Employee by name, Department, ID or any related keywords"
+      @tableButtonClick="viewRecord"
+    />
   </div>
 </template>
 
@@ -19,6 +26,12 @@ export default {
         { header: '', field: 'actions' }
       ],
       massageStaff
+    }
+  },
+
+  methods: {
+    viewRecord(){
+      this.$router.push('/massage/massage-staff/ID')
     }
   }
 }

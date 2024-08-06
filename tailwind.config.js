@@ -3,6 +3,7 @@
 // const colors = require("tailwindcss/colors");
 module.exports = {
   prefix: "",
+  important: true,
   // purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {

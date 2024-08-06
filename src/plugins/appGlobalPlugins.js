@@ -18,7 +18,7 @@ import { createHead } from '@vueuse/head'
 const head = createHead()
 
 // Plugins
-import { currencyFormat, formatDate, getID } from '@/plugins/filters'
+import { currencyFormat, formatDate, getID, splitText } from '@/plugins/filters'
 
 export default function registerPlugins(app) {
   app.use(ElementPlus)
@@ -45,4 +45,5 @@ export default function registerPlugins(app) {
   app.config.globalProperties.$currencyFormat = currencyFormat
   app.config.globalProperties.$formatDate = formatDate
   app.config.globalProperties.$getID = getID
+  app.config.globalProperties.$splitText = splitText
 }

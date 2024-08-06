@@ -2,6 +2,10 @@
     @apply bg-primary-500 text-white px-[10px] py-[12px] rounded-md text-[15px] w-full  font-medium
 }
 
+.btn-brand-md {
+    @apply bg-primary-500 text-white px-[16px] py-[10px] rounded-md text-[12px]  font-medium
+}
+
 .btn-brand-rounded {
     @apply bg-primary-500 text-white px-[10px] py-[12px] rounded-md text-[15px] w-full font-medium
 }

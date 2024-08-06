@@ -1,11 +1,14 @@
 <template>
   <div>
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center mb-4">
       <div class="flex gap-2 items-center">
         <h4 class="font-semibold text-[22px]">{{ title }}</h4>
         <span class="text-primary-500 bg-primary-100 font-bold text-xl px-3 rounded-full"> {{ count }} </span>
       </div>
-      <vDownload />
+      <vDownload v-if="hasDownload" />
+      <button class="btn-brand-md" v-if="hasButton" @click="$emit('btnFunc')">
+        {{ btnText }}
+      </button>
     </div>
 
     <div class="my-4" v-if="hasFilter">
@@ -16,7 +19,7 @@
       <slot name="tableHeader"></slot>
     </div>
 
-    <DataTable :value="items" tableStyle="min-width: 50rem" stripedRows :loading="loading">
+    <DataTable :value="items" tableStyle="min-width: 50rem" :loading="loading">
       <template #loading> Loading data. Please wait. </template>
       <TableColumn v-for="col of columns" :key="col.field" :field="col.field" :header="col.header">
         <template #body="{ data, field }">
@@ -32,6 +35,17 @@
               </span>
             </div>
           </template>
+
+          <template v-if="field === 'catData'">
+            <div class="flex gap-2 items-center">
+              <img :src="data.src" loading="lazy" class="w-[45px] h-[35px] rounded-lg" alt="" />
+              <span class="flex flex-col">
+                <span class="font-semibold text-[14px]">{{ data.name }}</span>
+                <!-- <span class="text-xs text-gray-600">{{ `@${data.username}` }}</span> -->
+              </span>
+            </div>
+          </template>
+
           <template v-if="field === 'tableStatus'">
             <span :class="data.status">
               {{ data.status }}
@@ -112,7 +126,16 @@ export default {
     },
     title: String,
     count: String,
-    inputPlaceholder: String
+    inputPlaceholder: String,
+    hasDownload: {
+      type: Boolean,
+      default: true
+    },
+    hasButton: {
+      type: Boolean,
+      default: false
+    },
+    btnText: String
   },
 
   methods: {
@@ -129,9 +152,12 @@ export default {
 .p-datatable .p-datatable-thead > tr > th {
   /* background: var(---gray-300); */
   border-bottom: 1px solid var(---gray-300);
+  background: transparent;
   font-size: 14px;
 }
 
+.p-datatable .p-datatable-thead > tr {
+}
 .p-column-title {
   font-weight: 600;
 }

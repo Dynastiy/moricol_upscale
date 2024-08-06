@@ -1,5 +1,5 @@
 {
-  "name": "gdg",
+  "name": "moricol-admin",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,8 +12,11 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-countdown": "^2.1.2",
+    "@schedule-x/theme-default": "^1.57.1",
+    "@schedule-x/vue": "^1.53.0",
     "@vueuse/head": "^2.0.0",
     "axios": "^1.6.4",
+    "chart.js": "^4.4.3",
     "crypto-js": "^4.2.0",
     "element-plus": "^2.5.3",
     "firebase": "^10.10.0",

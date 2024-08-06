@@ -8,7 +8,7 @@ const routes = [
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
-      pageTitle: 'loan - Home',
+      pageTitle: 'Loan - Home',
       name: 'loan',
       label: 'Overview',
       icon: '',
@@ -23,7 +23,7 @@ const routes = [
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
-      pageTitle: 'loan - transactions',
+      pageTitle: 'Loan - transactions',
       name: 'transactions',
       label: 'transactions',
       icon: '',
@@ -38,7 +38,7 @@ const routes = [
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
-      pageTitle: 'loan - category',
+      pageTitle: 'Loan - category',
       name: 'loan-category',
       label: 'loan-category',
       icon: '',

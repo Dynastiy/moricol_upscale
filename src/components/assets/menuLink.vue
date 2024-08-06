@@ -40,7 +40,8 @@ export default {
   computed: {
     parentName() {
       return this.$route.meta.parent
-    }
+    },
+    
   }
 }
 </script>

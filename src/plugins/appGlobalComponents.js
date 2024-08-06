@@ -56,6 +56,7 @@ import Rating from 'primevue/rating';
 
 import vTable from '@/components/assets/table.vue';
 import mainTabHeader from '@/components/assets/mainTabHeader.vue';
+import dropInput from '@/components/assets/dropInput.vue';
 
 // Veuelidate Form 
 import { Form, Field, ErrorMessage } from 'vee-validate'
@@ -76,4 +77,5 @@ export default function registerComponents(app) {
     app.component('ErrorMessage', ErrorMessage)
     app.component('vTable', vTable)
     app.component('mainTabHeader', mainTabHeader)
+    app.component('vDrop', dropInput)
 }

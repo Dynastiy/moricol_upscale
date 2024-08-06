@@ -30,28 +30,20 @@ export default {
   },
 
   methods: {
-    updateTitle() {
-      this.pageTitle = this.$route.meta.pageTitle
-      // const { title, content } = this.fetchPageData(this.$route.meta.pageTitle);
-      // this.pageTitle = title;
-      // this.pageContent = content;
-      useHead({
-        title: this.pageTitle
-      })
-    }
+    
   },
 
   created() {
-    this.updateTitle();
+    // this.updateTitle();
   },
 
   watch: {
-    '$route.meta.pageTitle': {
-      handler() {
-        this.updateTitle()
-      },
-      immediate: true
-    }
+    // '$route.meta.pageTitle': {
+    //   handler() {
+    //     this.updateTitle()
+    //   },
+    //   immediate: true
+    // }
   },
 
   computed: {
