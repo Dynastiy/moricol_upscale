@@ -1,6 +1,6 @@
 <template>
   <div class="w-9/12 mx-auto">
-    <div class="shadow bg-gray-100 py-6 px-12 rounded-lg mb-4">
+    <div class="shadow bg-gray-50 py-6 px-12 rounded-lg mb-4">
       <img src="@/assets/img/image.png" class="w-20 h-20 mx-auto" alt="" />
       <div class="flex flex-col gap-5 mt-4">
         <span class="flex justify-between" v-for="(value, name) in details" :key="name">

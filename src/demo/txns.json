@@ -8,6 +8,7 @@
         "date":"12/08/2024",
         "time": "10:30AM - 11:30AM",
         "username": "john_doe",
+        "gender": "female",
         "profilePicture": "https://example.com/profiles/john_doe.jpg"
     },
     {
@@ -19,6 +20,7 @@
         "date":"12/08/2024",
         "time": "10:30AM - 11:30AM",
         "username": "jane_smith",
+        "gender": "female",
         "profilePicture": "https://example.com/profiles/jane_smith.jpg"
     },
     {
@@ -30,6 +32,7 @@
         "date":"12/08/2024",
         "time": "10:30AM - 11:30AM",
         "username": "alice_johnson",
+        "gender": "male",
         "profilePicture": "https://example.com/profiles/alice_johnson.jpg"
     },
     {
@@ -39,6 +42,7 @@
         "feePerHour": 5500,
         "status": "completed",
         "date":"12/08/2024",
+        "gender": "male",
         "time": "10:30AM - 11:30AM",
         "username": "bob_brown",
         "profilePicture": "https://example.com/profiles/bob_brown.jpg"
@@ -50,6 +54,7 @@
         "feePerHour": 5000,
         "status": "ongoing",
         "date":"12/08/2024",
+        "gender": "male",
         "time": "10:30AM - 11:30AM",
         "username": "charlie_davis",
         "profilePicture": "https://example.com/profiles/charlie_davis.jpg"
@@ -61,6 +66,7 @@
         "feePerHour": 6000,
         "status": "ongoing",
         "date":"12/08/2024",
+        "gender": "male",
         "time": "10:30AM - 11:30AM",
         "username": "diana_evans",
         "profilePicture": "https://example.com/profiles/diana_evans.jpg"
@@ -72,6 +78,7 @@
         "feePerHour": 5500,
         "status": "completed",
         "date":"12/08/2024",
+        "gender": "female",
         "time": "10:30AM - 11:30AM",
         "username": "ethan_foster",
         "profilePicture": "https://example.com/profiles/ethan_foster.jpg"
@@ -83,7 +90,9 @@
         "feePerHour": 4500,
         "status": "ongoing",
         "date":"12/08/2024",
+        "gender": "male",
         "time": "10:30AM - 11:30AM",
+        "gender": "male",
         "username": "fiona_green",
         "profilePicture": "https://example.com/profiles/fiona_green.jpg"
     }

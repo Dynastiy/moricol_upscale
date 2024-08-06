@@ -152,6 +152,7 @@ export default {
         ]
       }
     },
+
     setChartOptions() {
       const documentStyle = getComputedStyle(document.documentElement)
       const textColor = documentStyle.getPropertyValue('--text-color')
@@ -192,6 +193,7 @@ export default {
         }
       }
     },
+
     setChartData2() {
       const documentStyle = getComputedStyle(document.documentElement)
 
@@ -211,6 +213,7 @@ export default {
         ]
       }
     },
+    
     setChartOptions2() {
       const documentStyle = getComputedStyle(document.documentElement)
       const textColor = documentStyle.getPropertyValue('--text-color')

@@ -1,74 +1,91 @@
 [
     {
         "name": "John Doe",
+        "service": "Surgery",
         "services": ["Swedish Massage", "Deep Tissue Massage"],
         "location": "Lagos",
         "feePerHour": 5000,
         "status": "active",
         "username": "john_doe",
+        "date": "24/12/2024",
         "profilePicture": "https://example.com/profiles/john_doe.jpg"
+
     },
     {
         "name": "Jane Smith",
+        "service": "Telemedicine",
         "services": ["Thai Massage", "Hot Stone Massage"],
         "location": "Abuja",
         "feePerHour": 6500,
         "status": "inactive",
         "username": "jane_smith",
+        "date": "24/12/2024",
         "profilePicture": "https://example.com/profiles/jane_smith.jpg"
     },
     {
         "name": "Alice Johnson",
+        "service": "Surgery",
         "services": ["Aromatherapy Massage", "Reflexology"],
         "location": "Ibadan",
         "feePerHour": 4500,
         "status": "active",
         "username": "alice_johnson",
+        "date": "24/12/2024",
         "profilePicture": "https://example.com/profiles/alice_johnson.jpg"
     },
     {
         "name": "Bob Brown",
+        "service": "Cancer",
         "services": ["Sports Massage", "Shiatsu"],
         "location": "Port Harcourt",
         "feePerHour": 5500,
         "status": "inactive",
         "username": "bob_brown",
+        "date": "24/12/2024",
         "profilePicture": "https://example.com/profiles/bob_brown.jpg"
     },
     {
         "name": "Charlie Davis",
+        "service": "Homecare",
         "services": ["Swedish Massage", "Prenatal Massage"],
         "location": "Kano",
         "feePerHour": 5000,
         "status": "active",
         "username": "charlie_davis",
+        "date": "24/12/2024",
         "profilePicture": "https://example.com/profiles/charlie_davis.jpg"
     },
     {
         "name": "Diana Evans",
+        "service": "Cancer",
         "services": ["Hot Stone Massage", "Deep Tissue Massage"],
         "location": "Benin City",
         "feePerHour": 6000,
         "status": "active",
         "username": "diana_evans",
+        "date": "24/12/2024",
         "profilePicture": "https://example.com/profiles/diana_evans.jpg"
     },
     {
         "name": "Ethan Foster",
+        "service": "Surgery",
         "services": ["Thai Massage", "Sports Massage"],
         "location": "Enugu",
         "feePerHour": 5500,
         "status": "inactive",
         "username": "ethan_foster",
+        "date": "24/12/2024",
         "profilePicture": "https://example.com/profiles/ethan_foster.jpg"
     },
     {
         "name": "Fiona Green",
+        "service": "Surgery",
         "services": ["Aromatherapy Massage", "Shiatsu"],
         "location": "Jos",
         "feePerHour": 4500,
         "status": "active",
         "username": "fiona_green",
+        "date": "24/12/2024",
         "profilePicture": "https://example.com/profiles/fiona_green.jpg"
     }
 ]

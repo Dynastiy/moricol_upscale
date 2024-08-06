@@ -2,7 +2,7 @@
   <div>
     <div class="flex justify-between items-center mb-4">
       <div class="flex gap-2 items-center">
-        <h4 class="font-semibold text-[22px]">{{ title }}</h4>
+        <h4 class="font-semibold text-[22px] capitalize">{{ title }}</h4>
         <span class="text-primary-500 bg-primary-100 font-bold text-xl px-3 rounded-full"> {{ count }} </span>
       </div>
       <vDownload v-if="hasDownload" />
@@ -91,6 +91,14 @@
               class="text-primary-500 text-xs"
             >
               View BVN
+            </span>
+          </template>
+          <template v-else-if="field === 'action'">
+            <span
+              role="button"
+              @click="$emit('tableButtonClick', data)"
+            >
+              <icon icon="f7:ellipsis-vertical" />
             </span>
           </template>
           <template v-else>

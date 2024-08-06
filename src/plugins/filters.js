@@ -23,4 +23,10 @@ export function currencyFormat(value) {
     const options = value.split("_").join(' ')
     return options
   }
-  
+
+  export function getOrdinalSuffix(index) {
+    const suffixes = ["th", "st", "nd", "rd"];
+    const v = index % 100;
+
+    return index + (suffixes[(v - 20) % 10] || suffixes[v] || suffixes[0]);
+  }
