@@ -5,7 +5,7 @@
       <span class="text-gray-500 text-[12px] block"> Detailed information about your store </span>
     </div>
 
-    <div class="bg-tertiary-50 p-4 grid grid-cols-3 rounded-lg mt-4 gap-4">
+    <div class="bg-[#F8FAFC] p-4 grid grid-cols-3 rounded-lg mt-4 gap-4">
       <div class="flex gap-4 col-span-3">
         <div class="bg-white p-4 rounded-lg flex gap-3">
           <span
@@ -213,7 +213,7 @@ export default {
         ]
       }
     },
-    
+
     setChartOptions2() {
       const documentStyle = getComputedStyle(document.documentElement)
       const textColor = documentStyle.getPropertyValue('--text-color')

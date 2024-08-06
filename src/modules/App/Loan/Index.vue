@@ -8,7 +8,7 @@
         </h6>
       </div>
 
-      <div class="bg-tertiary-50 p-4 flex flex-col rounded-lg mt-4 gap-4">
+      <div class="bg-[#F8FAFC] p-4 flex flex-col rounded-lg mt-4 gap-4">
         <div class="bg-white rounded-lg flex">
           <div
             v-for="(value, name) of cardsData"
@@ -92,7 +92,20 @@ export default {
       const documentStyle = getComputedStyle(document.documentElement)
 
       return {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        labels: [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
+          'August',
+          'September',
+          'October',
+          'November',
+          'December'
+        ],
         datasets: [
           {
             label: 'Completed Loan',
@@ -130,7 +143,7 @@ export default {
         aspectRatio: 0.8,
         plugins: {
           legend: {
-            position: "bottom",
+            position: 'bottom',
             labels: {
               color: textColor
             }

@@ -8,7 +8,7 @@ const routes = [
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
-      pageTitle: 'telemedicine - home',
+      pageTitle: 'Telemedicine - Home',
       name: 'telemedicine',
       label: 'Dashboard',
       icon: '',
@@ -19,11 +19,11 @@ const routes = [
   {
     path: '/telemedicine/telemedicine-staff',
     name: 'telemedicine-telemedicine-staff',
-    component: Home,
+    component: () => import('@/modules/App/Telemedicine/Staff.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
-      pageTitle: 'telemedicine - staff',
+      pageTitle: 'Telemedicine - Staff',
       name: 'telemedicine-staff',
       label: 'telemedicine-staff',
       icon: '',
@@ -32,9 +32,25 @@ const routes = [
     }
   },
   {
+    path: '/telemedicine/telemedicine-staff/ID',
+    name: 'telemedicine-staff-details',
+    component: () => import('@/modules/App/telemedicine/uuid/ViewStaff.vue'),
+    meta: {
+      layout: 'dashboard',
+      requiresAuth: false,
+      pageTitle: 'Telemedicine - staff Details',
+      name: 'telemedicine-staff',
+      label: 'telemedicine-staff',
+      icon: '',
+      adminUserType: null,
+      parent: 'telemedicine-staff',
+      isSubPage: true
+    }
+  },
+  {
     path: '/telemedicine/staff-schedules',
     name: 'telemedicine-staff-schedules',
-    component: Home,
+    component: () => import('@/modules/App/Telemedicine/Schedules.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
@@ -49,7 +65,7 @@ const routes = [
   {
     path: '/telemedicine/staff-transactions',
     name: 'telemedicine-staff-transactions',
-    component: Home,
+    component: () => import('@/modules/App/Telemedicine/StaffTransactions.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
@@ -64,7 +80,7 @@ const routes = [
   {
     path: '/telemedicine/user-transactions',
     name: 'telemedicine-user-transactions',
-    component: Home,
+    component: () => import('@/modules/App/Telemedicine/UserTransactions.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
@@ -79,7 +95,7 @@ const routes = [
   {
     path: '/telemedicine/telemedicine-category',
     name: 'telemedicine-telemedicine-category',
-    component: Home,
+    component: () => import('@/modules/App/Telemedicine/Category.vue'),
     meta: {
       layout: 'dashboard',
       requiresAuth: false,
@@ -89,6 +105,22 @@ const routes = [
       icon: '',
       adminUserType: 'telemedicine',
       parent: 'telemedicine-category'
+    }
+  },
+  {
+    path: '/telemedicine/telemedicine-category/create',
+    name: 'create-telemedicine-category',
+    component: () => import('@/modules/App/Telemedicine/uuid/createCategory.vue'),
+    meta: {
+      layout: 'dashboard',
+      requiresAuth: false,
+      pageTitle: 'Telemedicine - Create Category',
+      name: 'Create Category',
+      label: 'telemedicine-category',
+      icon: '',
+      adminUserType: null,
+      parent: 'telemedicine-category',
+      isSubPage: true
     }
   }
 ]
